@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SismoAlert - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root { --primary-color: #1a4d4a; --primary-light: #2d6a65; --accent-color: #f39c12; --text-dark: #2b2d42; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--text-dark); background-color: #fafafa; padding-top: 70px; display: flex; flex-direction: column; min-height: 100vh; }
+        .navbar { background-color: #111111; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .navbar-brand { font-weight: 700; font-size: 1.4rem; color: #ffffff !important; }
+        .nav-link { font-weight: 500; font-size: 0.95rem; color: #d1d5db !important; }
+        .nav-link:hover, .nav-link.active { color: var(--accent-color) !important; }
+        .hero-section { background: linear-gradient(135deg, #1a4d4a, #2d6a65); color: white; padding: 80px 0; }
+        .section-title { color: var(--primary-color); font-weight: 700; position: relative; padding-bottom: 12px; margin-bottom: 30px; }
+        .section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 60px; height: 4px; background-color: var(--accent-color); border-radius: 2px; }
+        footer { margin-top: auto; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.jpeg" alt="Logo SismoAlert" class="me-2 rounded-circle" style="max-height: 40px; width: 40px; object-fit: cover;">
+                <span>SismoAlert</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="oportunidades.html">Identificación de Oportunidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="diseno.html">Diseño</a></li>
+                    <li class="nav-item"><a class="nav-link" href="organizacion.html">Organización y Gestión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="planificacion.html">Planificación y Ejecución</a></li>
+                    <li class="nav-item"><a class="nav-link" href="evaluacion.html">Evaluación y Perfeccionamiento</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container text-center text-md-start">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="badge bg-warning text-dark mb-2 fw-bold">Proyecto Tecnológico</span>
+                    <h1 class="display-4 fw-bold">SismoAlert</h1>
+                    <p class="lead">Sistema inclusivo de detección sísmica con alerta sonora y visual para el hogar.</p>
+                    <hr class="my-4 border-light">
+                    <div class="row text-start g-2">
+                        <div class="col-sm-6"><i class="bi bi-people-fill me-2"></i><strong>Integrantes:</strong> Zeballos Victoria - Suarez Zaira</div>
+                        <div class="col-sm-6"><i class="bi bi-person-badge-fill me-2"></i><strong>Profesor:</strong> López Cristian</div>
+                        <div class="col-sm-6"><i class="bi bi-mortarboard-fill me-2"></i><strong>Curso:</strong> 7º 2º</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                    <div class="p-3 bg-dark rounded-4 shadow border border-secondary">
+                        <img src="logo.jpeg" alt="Logo SismoAlert" class="img-fluid rounded-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title">Introducción</h2>
+            <p class="fs-5 text-muted">
+                Los sismos son eventos naturales e impredecibles que ponen en riesgo la seguridad dentro del hogar. En una emergencia, recibir un aviso temprano es clave para resguardarse. Sin embargo, la mayoría de las alarmas residenciales son solo sonoras, dejando desprotegidas a las personas con discapacidad auditiva o adultos mayores.
+            </p>
+            <p class="fs-5 text-muted">
+                Para resolver esta problemática, este proyecto presenta el prototipo de una alarma sísmica inclusiva de bajo costo. Utilizando un microcontrolador y un sensor acelerómetro (MPU-6050), el sistema detecta y analiza las vibraciones de la vivienda. Al confirmar un sismo, activa de manera simultánea una alerta sonora (buzzer) y una alerta visual de alta visibilidad (luces LED), garantizando una advertencia accesible e inmediata para todos los integrantes del hogar.
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container"><p class="mb-0">&copy; SismoAlert - Proyecto Tecnológico. Zeballos Victoria & Suarez Zaira.</p></div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

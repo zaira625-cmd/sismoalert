@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SismoAlert - Diseño</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root { --primary-color: #1a4d4a; --accent-color: #f39c12; --text-dark: #2b2d42; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--text-dark); background-color: #fafafa; padding-top: 70px; display: flex; flex-direction: column; min-height: 100vh; }
+        .navbar { background-color: #111111; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .navbar-brand { font-weight: 700; font-size: 1.4rem; color: #ffffff !important; }
+        .nav-link { font-weight: 500; font-size: 0.95rem; color: #d1d5db !important; }
+        .nav-link:hover, .nav-link.active { color: var(--accent-color) !important; }
+        .section-title { color: var(--primary-color); font-weight: 700; position: relative; padding-bottom: 12px; margin-bottom: 30px; }
+        .section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 60px; height: 4px; background-color: var(--accent-color); border-radius: 2px; }
+        .custom-card { border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        footer { margin-top: auto; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo sismo alert.jpeg" alt="Logo SismoAlert" class="me-2 rounded-circle" style="max-height: 40px; width: 40px; object-fit: cover;">
+                <span>SismoAlert</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="oportunidades.html">Identificación de Oportunidades</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="diseno.html">Diseño</a></li>
+                    <li class="nav-item"><a class="nav-link" href="organizacion.html">Organización y Gestión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="planificacion.html">Planificación y Ejecución</a></li>
+                    <li class="nav-item"><a class="nav-link" href="evaluacion.html">Evaluación y Perfeccionamiento</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title">Diseño</h2>
+            
+            <div class="card custom-card p-4 my-4 bg-light border-start border-4 border-info">
+                <p class="fs-5">
+                    Para lograr un prototipo con una estética aceptable y llamativa, tenemos que seguir ciertas condiciones, planificar una idea y llevarla a cabo.
+                </p>
+                <p class="fs-5">
+                    Nuestra idea de diseño a realizar sería como una pequeña “caja” que estaría colocada en la pared de manera que no se mueva en lo absoluto, así de esta manera no confundimos cualquier vibración accidental con un sismo real. Para poder realizar esta caja, necesitamos materiales que no interfieran con nuestro proyecto ni generen cortos, lo ideal sería un plástico duro que proteja y no genere inconvenientes.
+                </p>
+                <p class="fs-5">
+                    Lo que se vería en su superficie serían los leds, buzzer y el pulsador. El pulsador sirve en este caso para silenciar al buzzer en caso de que se esté produciendo un sismo, si no para el sismo en determinado tiempo el buzzer sigue sonando, lo que puede ser irritante para algunas personas, entonces este pulsador lo silencia hasta que el sismo pare y la luz verde se encienda, cuando se detecte otra vibración el mismo vuelve a emitir sonido.
+                </p>
+            </div>
+
+            <!-- Sección del Esquema de Diseño / Imagen -->
+            <div class="card custom-card p-4 my-4 bg-white text-center">
+                <h3 class="h4 text-primary fw-bold mb-3"><i class="bi bi-file-earmark-image-fill me-2"></i>Esquema de Conexiones y Montaje Físico</h3>
+                <p class="text-muted">Diseño técnico detallado del gabinete, componentes internos y distribución del circuito de SismoAlert.</p>
+                
+                <div class="p-2 bg-light rounded border mt-3">
+                    <img src="diseno-sismoalert.jpeg" alt="Esquema de conexiones y montaje físico de SismoAlert" class="img-fluid rounded shadow-sm" style="max-height: 600px; width: 100%; object-fit: contain;">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; SismoAlert - Proyecto Tecnológico. Zeballos Victoria & Suarez Zaira.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

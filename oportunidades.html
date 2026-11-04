@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SismoAlert - Identificación de Oportunidades</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #1a4d4a;
+            --primary-light: #2d6a65;
+            --accent-color: #f39c12;
+            --text-dark: #2b2d42;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: var(--text-dark);
+            background-color: #fafafa;
+            padding-top: 70px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: #111111;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .navbar-brand { font-weight: 700; font-size: 1.4rem; color: #ffffff !important; }
+        .nav-link { font-weight: 500; font-size: 0.95rem; color: #d1d5db !important; }
+        .nav-link:hover, .nav-link.active { color: var(--accent-color) !important; }
+
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 12px;
+            margin-bottom: 30px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .custom-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        footer { margin-top: auto; }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo sismo alert.jpeg" alt="Logo SismoAlert" class="me-2 rounded-circle" style="max-height: 40px; width: 40px; object-fit: cover;">
+                <span>SismoAlert</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="oportunidades.html">Identificación de Oportunidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="diseno.html">Diseño</a></li>
+                    <li class="nav-item"><a class="nav-link" href="organizacion.html">Organización y Gestión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="planificacion.html">Planificación y Ejecución</a></li>
+                    <li class="nav-item"><a class="nav-link" href="evaluacion.html">Evaluación y Perfeccionamiento</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Identificación de Oportunidades</h2>
+            <p>
+                En esta etapa identificamos una problemática relacionada con los movimientos sísmicos y la necesidad de contar con una forma rápida de alertar a las personas ante la presencia de un sismo. A partir de esta situación, analizamos el problema, sus posibles causas y consecuencias, y las tecnologías que podrían utilizarse para desarrollar una solución.
+            </p>
+            <p>
+                Como equipo, proponemos diseñar un dispositivo de alerta sísmica para viviendas, utilizando Arduino y sensores capaces de detectar movimientos o vibraciones. El objetivo es desarrollar un prototipo que, al detectar un movimiento determinado, active una alarma para alertar a las personas que se encuentren en le lugar.
+            </p>
+
+            <!-- Tema y Problema -->
+            <div class="card custom-card p-4 my-4 bg-white">
+                <h3 class="h4 text-success fw-bold"><i class="bi bi-activity me-2"></i>Tema y Problema: Fenómeno Natural, Los Sismos</h3>
+                <h4 class="h5 mt-3">¿Qué es un Sismo?</h4>
+                <p>
+                    Un sismo (terremoto o temblor) es la vibración de la Tierra producida por una liberación rápida y repentina de energía acumulada en la corteza terrestre. Esta energía se origina principalmente por el movimiento y fricción de las placas tectónicas a lo largo de fallas geológicas.
+                </p>
+            </div>
+
+            <!-- Hipocentro y Epicentro -->
+            <div class="card custom-card p-4 my-4 bg-white">
+                <h3 class="h4 text-primary fw-bold"><i class="bi bi-geo-alt-fill me-2"></i>Hipocentro y Epicentro</h3>
+                <p>
+                    El hipocentro y el epicentro son las dos coordenadas espaciales fundamentales para ubicar el origen de un evento sísmico. Aunque están estrechamente vinculados, representan puntos físicos completamente distintos: uno se encuentra en la profundidad de la Tierra y el otro en la superficie.
+                </p>
+
+                <div class="row g-4 mt-2">
+                    <div class="col-md-6">
+                        <div class="p-3 bg-light rounded border h-100">
+                            <h4 class="h5 text-danger fw-bold"><i class="bi bi-arrow-down-square me-2"></i>Hipocentro (Foco Sísmico)</h4>
+                            <p>Punto físico exacto en el interior de la litosfera donde se inicia la ruptura de las rocas y se libera la energía acumulada.</p>
+                            <ul>
+                                <li><strong>Ubicación:</strong> Subterránea (pocos km hasta más de 600 km).</li>
+                                <li><strong>Superficiales:</strong> &lt; 70 km (los más peligrosos).</li>
+                                <li><strong>Intermedios:</strong> 70 km a 300 km.</li>
+                                <li><strong>Profundos:</strong> &gt; 300 km.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-3 bg-light rounded border h-100">
+                            <h4 class="h5 text-warning fw-bold"><i class="bi bi-pin-map-fill me-2"></i>Epicentro</h4>
+                            <p>Punto sobre la superficie terrestre ubicado en la vertical exacta del hipocentro.</p>
+                            <ul>
+                                <li><strong>Ubicación:</strong> Superficial (coordenadas de latitud y longitud).</li>
+                                <li><strong>Geometría:</strong> Distancia más corta entre el foco y la superficie.</li>
+                                <li><strong>Importancia:</strong> Zona donde se registra la máxima intensidad y mayores daños.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabla Comparativa -->
+                <div class="table-responsive mt-4">
+                    <table class="table table-striped table-hover align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Característica</th>
+                                <th>Hipocentro (Foco)</th>
+                                <th>Epicentro</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Definición</strong></td>
+                                <td>Punto de origen subterráneo de la ruptura de la falla.</td>
+                                <td>Proyección del hipocentro sobre la superficie terrestre.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dimensión</strong></td>
+                                <td>Tridimensional (Latitud, Longitud y Profundidad h).</td>
+                                <td>Bidimensional (Latitud y Longitud).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Peligrosidad</strong></td>
+                                <td>A menor profundidad focal, mayor destructividad en la corteza.</td>
+                                <td>Suele ser la zona de mayor sacudida e impacto directo en la población.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tipos de Ondas -->
+            <div class="card custom-card p-4 my-4 bg-white">
+                <h3 class="h4 text-info fw-bold"><i class="bi bi-tsunami me-2"></i>Tipos de Ondas Sísmicas</h3>
+                <p>La energía liberada en el hipocentro se propaga en todas direcciones en forma de ondas:</p>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="border rounded p-3 h-100">
+                            <span class="badge bg-success p-2 mb-2">Ondas P (Primarias)</span>
+                            <p class="small text-muted">Las más rápidas (5 a 8 km/s). Comprimen y expanden el suelo. <strong>Son las que el prototipo utiliza para dar la voz de alarma temprana.</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="border rounded p-3 h-100">
+                            <span class="badge bg-warning text-dark p-2 mb-2">Ondas S (Secundarias)</span>
+                            <p class="small text-muted">Más lentas que las P. Mueven el suelo de lado a lado o de arriba abajo de forma perpendicular.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="border rounded p-3 h-100">
+                            <span class="badge bg-danger p-2 mb-2">Ondas Superficiales</span>
+                            <p class="small text-muted">(Love y Rayleigh) Se desplazan únicamente por la superficie y son responsables de los mayores daños.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medición -->
+            <div class="card custom-card p-4 my-4 bg-white">
+                <h3 class="h4 text-dark fw-bold"><i class="bi bi-speedometer2 me-2"></i>Medición de los Sismos: Magnitud e Intensidad</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle">
+                        <thead class="table-secondary">
+                            <tr>
+                                <th>Parámetro</th>
+                                <th>Magnitud (Mw / Richter)</th>
+                                <th>Intensidad (Mercalli Modificada)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>¿Qué mide?</strong></td>
+                                <td>La cantidad de energía liberada en el origen.</td>
+                                <td>El efecto, percepción y daño causado en un lugar específico.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tipo de medida</strong></td>
+                                <td>Instrumental e idéntica en cualquier parte del mundo.</td>
+                                <td>Subjetiva y variable según la distancia al epicentro.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Escala</strong></td>
+                                <td>Logarítmica sin límite fijo (ej. 5.5, 6.8).</td>
+                                <td>Números romanos del I (impreceptible) al XII (destrucción total).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Propuesta de Solución -->
+            <div class="card custom-card p-4 my-4 bg-white border-start border-4 border-success">
+                <h3 class="h4 text-success fw-bold"><i class="bi bi-lightbulb-fill me-2"></i>Propuesta de Solución</h3>
+                <p>
+                    El proyecto consiste en el desarrollo de un prototipo de alarma sísmica residencial e inclusiva, diseñado mediante el uso de placas Arduino y un sensor acelerómetro MPU-6050. Si bien ya existen varias alarmas de este tipo, específicamente para avisar que está sucediendo este fenómeno, nuestro prototipo también se basa en la detección de las aceleraciones iniciales del suelo (ondas P) provocadas por un sismo; al superar un umbral de seguridad preestablecido, el microcontrolador activa de manera simultánea una señal sonora y destellos lumínicos LED de alta intensidad.
+                </p>
+                <p>
+                    A diferencia de los sistemas tradicionales, esta tecnología busca resolver la falta de accesibilidad, los cuales dependen exclusivamente de avisos acústicos y dejan en absoluta vulnerabilidad a las personas con discapacidad auditiva. El dispositivo está orientado principalmente a personas hipoacúsicas o sordas, y puede ser utilizado por cualquier residente en zonas de alta actividad sísmica dentro de sus hogares.
+                </p>
+                <h5 class="mt-3 fw-bold">Ventajas y Desventajas</h5>
+                <p>
+                    Entre sus principales ventajas se destacan la doble vía de advertencia sensorial —que garantiza que la alerta sea percibida independientemente de la capacidad auditiva—, su bajo costo de desarrollo y su versatilidad para espacios domiciliarios. No obstante, durante su implementación pueden surgir ciertas dificultades técnicas, como la calibración precisa del umbral de sensibilidad del sensor para evitar falsas alarmas ante vibraciones cotidianas intensas (por ejemplo, golpes fuertes o tráfico pesado cercano), así como la necesidad de asegurar un suministro eléctrico estable o de respaldo para el circuito.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; SismoAlert - Proyecto Tecnológico. Zeballos Victoria & Suarez Zaira.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
